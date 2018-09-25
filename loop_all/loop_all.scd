@@ -73,8 +73,8 @@ s.waitForBoot{
 		\instrument, \play,
 		//	\buf, Pseq(~buffers, inf), // plays all samples in order
 		\buf, Pxrand(~buffers, inf),
-		\len, Pfunc { |e| e[\buf].duration },
-		\delta, Pkey(\len) + Pwhite(2,4, inf)
+		\len, Pfunc { |e| e[\buf].duration / 3 },
+		\delta, Pkey(\len) + Pwhite( 2, 4, inf)
 	);
 
 	s.sync;
