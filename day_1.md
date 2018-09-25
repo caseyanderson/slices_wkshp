@@ -2,8 +2,9 @@
 
 ### Listening
 
+* "Only [Harmony Series #17]," by Michael Pisaro, recording and realization by Jason Kahn
 * "Middle of the Field," Pieces of Air, Toshiya Tsunoda
-* "Chicks In A Box- Ratna Park 1.21.05," Sounds Of Nepal Volumes 1 - 3, Aaron Dilloway
+* "Chicks In A Box - Ratna Park 1.21.05," Sounds Of Nepal Volumes 1 - 3, Aaron Dilloway
 * "Loading Pick-Up Truck," Sounds of the Junk Yard
 * "Bent Pipe," Extract From Field Recording Archive #1, Toshiya Tsunoda
 * "Lake Tear of the Clouds, Mt. Marcy - The Source, Elevation 4.332 feet," A Sound Map of the Hudson River, Annea Lockwood
@@ -15,7 +16,7 @@
 Using your phone's Voice Memo app, or a similar one, go outside and find an outdoor space to record. Make **five** recordings, each **2 minutes** in duration, from **five** different places in your selected location. Remember to bring headphones, a sound analog to a camera's viewfinder, so you know what you are recording.
 
 
-### Simple Editing
+### Basic Editing
 
 1. Get your recordings off of your phone and onto your laptop
 2. Download Reaper [here](https://www.reaper.fm/download.php)
@@ -64,11 +65,21 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 19. Control+X to exit, Y to confirm changes, Enter to save
 
 
-### testing loop one
+### testing loop_one.scd
 
 1. From the home directory navigate to the SC directory (this sucks to type so remember to use autocomplete with TAB): `cd supercolliderStandaloneRPI2/`
 2. run the following command (copy and paste it and then edit the filename): `xvfb-run --auto-servernum ./sclang -a -l ~/supercolliderStandaloneRPI2/sclang.yaml /home/pi/slices_wkshp/loop_one/loop_one.scd /home/pi/recordings/haiti.wav`
 
-You should both hear your recording playing (plug headphones into the 3.5mm jack on the RPi) and see something like this if everything worked
+You should both hear your recording playing (plug headphones into the 3.5mm jack on the **RPi**) and see something like this if everything worked
 
 ![](imgs/working_loop_onescd.png)
+
+
+### loop_one.scd: a brief explanation
+
+The long-term goal is to have the **RPi** automatically launch this **SC** file on boot, which requires some special steps in our code:
+* Unless we specify otherwise `scserver` runs with a default amount of memory. Increase the amount of memory `scserver` has access to with something like: `s.options.memSize = 8192 * 4`
+* Timing in **SC** is not always exactly precise. In order to manage this one can increase the `latency` (amount of time it takes to do things) on `scserver`. Note that this crucially occurs before the start of `s.waitForBoot` block and is set to `0.05`
+* The majority of the code in this file is wrapped in a `s.waitForBoot` [method](https://en.wikipedia.org/wiki/Method_(computer_programming)). `s.waitForBoot` evaluates, or runs, the code between curly brackets as soon as `scserver` has completed booting. We do not know exactly how long it will take for `scserver` to boot so this is an important protective measure
+* We could [hardcode](https://en.wikipedia.org/wiki/Hard_coding) the **filepath** to our sample, or we could tell **SC** that it can expect that information when we execute the file (passed in as an argument). `thisProcess.argv`, on Line 20, allows us to access this information and use it in the script. We access the **filepath** on Line 32 with `thePath[0].asString`
+* We need to make sure that **SC** waits until `scserver` is done adding our `play` `SynthDef` to the `SynthDescLib` (this is what `.add` does, btw) before trying to use it. In order to do so we include an `s.sync` on line 33. This is kind of like pausing the code until  `scserver` informs `sclang` that it is no longer busy. Since we do not know how long it will take to add `play` to the `SynthDescLib` `s.sync` is a very important tool here.
