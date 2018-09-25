@@ -1,8 +1,8 @@
 #!/bin/bash
 
-THE_SCRIPT="/home/pi/SC3-RPiZeroW/fixed_media/loop_one/loop_one.scd"
-THE_DIR="/home/pi/uSAMPLES"
-THE_FILE="akonting.aif"
+THE_SCRIPT="/home/pi/slices_wkshp/loop_one/loop_one.scd"
+THE_DIR="/home/pi/recordings"
+THE_FILE="haiti.wav"
 
 THE_PATH=$THE_DIR/$THE_FILE
 
