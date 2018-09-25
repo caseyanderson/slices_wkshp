@@ -79,7 +79,47 @@ You should both hear your recording playing (plug headphones into the 3.5mm jack
 
 Supercollider is made up of two applications: a language interpreter and one or more synthesis servers. All communication between the `lang` (short for language) and the `server` is done via [OpenSoundControl](http://opensoundcontrol.org/).
 
-In order to make sound the server must be running.
+In order to make sound the server must be running. One typically boots the server with the following: `s.boot;`
+
+Quitting the server is done with the following: `s.quit;`
+
+Similar to most other programming language, Functions in SC are denoted by the use of curly brackets. Anything between `{` `}` is a function.
+
+*For Example*
+
+```python3
+f = { "hello world!".postln; };
+f.value;
+```
+
+The first line of code stores the function at `f`, whereas the second line returns the `value` (in this case, prints the message "hello world!" to the post window) associated with the function. Here `value` is short for `evaluate`. If one needs to use a function simply `.value` it.
+
+Functions are used to make sound in SC.
+
+*For Example*
+
+```python3
+{ SinOsc.ar(440, 0, 0.2) }.play;
+```
+
+The example above plays a [Sine Wave](https://en.wikipedia.org/wiki/Sine_wave) with a frequency of 440Hz and an amplitude of 0.2 (amplitude, or what one can think of as volume, is generally kept within the range 0.0 to 1.0 in SC).
+
+`UGens` are objects capable of producing audio (with the `.ar`, or audio rate, class method) or control signals (with the `.kr`, or control rate, class method).
+
+*For Example*
+
+```python3
+(
+{ var ampOsc;
+    ampOsc = SinOsc.kr(0.5, 1.5pi, 0.5, 0.5);
+    SinOsc.ar(440, 0, ampOsc);
+}.play;
+)
+```
+
+In the above example, the `SinOsc` `UGen` is used both as control rate (to change the amplitude of the sounding `SinOsc`) and as audio rate (to actually play the `Sine` tone).
+
+SC has an optimized way of taking in information about `UGens` and their interconnections: `SynthDef`s. A `SynthDef` tells the server how to generate audio and translates that information to byte code. More specifically, a `SynthDef` is the blueprint that defines a particular instance of a playing `Synth`. Or, if you prefer, a `SynthDef` is a cake recipe and a `Synth` is the cake you end up with by following the recipe.
 
 
 ### loop_one.scd: a brief explanation
