@@ -15,11 +15,11 @@
 Using your phone's Voice Memo app, or a similar one, go outside and find an outdoor space to record. Make five recordings, each 2 minutes in duration, from different positions in your selected location. Remember to bring headphones, a sound analog to a camera's viewfinder, so you know what you are recording.
 
 
-### Simple Processing
+### Simple Editing
 
 1. Get your recordings off of your phone and onto your laptop
 2. Download Reaper [here](https://www.reaper.fm/download.php)
-3. Open Reaper, it should look like this
+3. Open Reaper, it should look something like this
 
 ![](imgs/reaper_window.png)
 
@@ -38,7 +38,7 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 9. Click on `Browse` and select the `Desktop` as the `Output Directory`
 10. Click on `Bounds` and select `Time Selection`
 11. In `Channels` select `Mono`
-12. Name your file, the `Render to File` window should look something like this
+12. Name your file. The `Render to File` window should look something like this
 
 ![](imgs/render_to_file_ready.png)
 
@@ -49,7 +49,6 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 
 1. Connect your Raspberry Pi to power, when the green `ACT` light is flashing proceed to the next step
 2. On your laptop open the **Terminal**: `Applications > Utilities > Terminal`
-3. Navigate to the Desktop: `cd Desktop/` (the Terminal has autocomplete, press the TAB key after typing the first few letters of `Desktop` to use it), press ENTER
-4. Send the file from the previous example to your Raspberry Pi: `scp FILENAME.wav pi@HOSTNAME.local:/home/pi/`
-5. Connect to the Raspberry Pi from your laptop: `ssh pi@HOSTNAME.local`
-2. Change
+3. Navigate to the Desktop: `cd Desktop/` (the **Terminal** has autocomplete, press the TAB key after typing the first few letters of `Desktop` to use it), press ENTER
+4. Send the file from the previous example to your Raspberry Pi: `scp FILENAME.wav pi@HOSTNAME.local:/home/pi/`, enter the login password to begin the file transfer
+5. Connect to the Raspberry Pi from your laptop: `ssh pi@HOSTNAME.local`, enter the login password
