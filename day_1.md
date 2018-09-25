@@ -26,11 +26,12 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 
 4. Open one of your recordings: `Insert > Media File`
 5. Double click on your file, which will open the `Properties` window. Click `Normalize`, then click `Apply`, and `OK` (if you are curious, you can read about normalization [here](https://en.wikipedia.org/wiki/Audio_normalization))
-5. Right click on the file and go to `Item Settings`, scroll down to `Take Channel Mode: Mono (downmix)`. Your `Stereo` file is now `Mono`.
-6. Click the `Play` button to listen to the `Mono` version of your recording
+6. Click the `Play` button to listen to your recording
 7. In the transport bar click and drag your cursor from the beginning of your file to the end. You should see two carrot looking markers at the beginning and end of your file, something like this
 
 ![](imgs/reaper_selection.png)
+
+Take some time to find a portion of your recording, shorter than its full 2 minute duration, that you would like to showcase. It doesn't need to have to start from the beginning of the file and can be any duration that you want.
 
 8. Click File > Render, which will open up a window that looks like this
 
@@ -38,8 +39,7 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 
 9. Click on `Browse` and select the `Desktop` as the `Output Directory`
 10. Click on `Bounds` and select `Time Selection`
-11. In `Channels` select `Mono`
-12. Name your file. The `Render to File` window should look something like this
+11. Name your file. The `Render to File` window should look something like this
 
 ![](imgs/render_to_file_ready.png)
 

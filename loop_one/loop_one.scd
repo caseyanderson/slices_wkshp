@@ -25,13 +25,14 @@ s.waitForBoot{
 		var env, sig;
 
 		env = EnvGen.kr( Env.asr( 0.0, 0.99, 0.05), trig,  doneAction: 0 );
-		sig = PlayBuf.ar(1, buf, BufRateScale.kr(buf), loop: 1) * env;
+		sig = PlayBuf.ar(2, buf, BufRateScale.kr(buf), loop: 1) * env;
 		Out.ar(0, sig);
 	}).add;
 
 	// setup buffer
 
-	~buf = Buffer.read( s, thePath[0].asString);
+//	~buf = Buffer.read( s, thePath[0].asString);
+	~buf = Buffer.readChannel(s, thePath[0].asString, channels: 0 )
 
 	// wait for sync message from server
 

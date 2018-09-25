@@ -6,7 +6,7 @@ play all files in a directory as one long loop
 
 run the file from inside supercolliderStandaloneRPI1 as follows (edit to suit your needs):
 
-	xvfb-run --auto-servernum ./sclang -a -l ~/supercolliderStandaloneRPI2/sclang.yaml /home/pi/slices_wkshp/loop_all/loop_all.scd /home/pi/recordings
+  xvfb-run --auto-servernum ./sclang -a -l ~/supercolliderStandaloneRPI2/sclang.yaml /home/pi/slices_wkshp/loop_all/loop_all.scd /home/pi/recordings
 
 
 TODO:
@@ -62,7 +62,7 @@ s.waitForBoot{
 		var env, sig;
 
 		env = EnvGen.kr( Env.linen( 0.0, len, 0.01), trig,  doneAction: 2 );
-		sig = PlayBuf.ar(1, buf, BufRateScale.kr( buf ), loop: 0) * env;
+		sig = PlayBuf.ar(2, buf, BufRateScale.kr( buf ), loop: 0) * env;
 		Out.ar(0, sig);
 	}).add;
 
