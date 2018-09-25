@@ -57,14 +57,10 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 8. Move your recording into the directory you just made: `mv FILENAME.wav recordings/`
 9. Clone this GitHub repo onto your Raspberry Pi: `git clone https://github.com/caseyanderson/slices_wkshp.git`
 10. Navigate to the `loop_one` directory: `cd slices_wkshp/loop_one/`
-11. Lis the contents of the directory with the following command: `ls`, you should see a file called `loop_one.sh`
-12. Open `loop_one.sh` with nano: `sudo nano loop_one.sh`, it should look like this
-
-![](imgs/loop_one_bash_file_confirm.png)
-
-13. Move the cursor (using the arrow keys on your keyboard) to `THE_FILE` and replace `haiti.wav` with whatever the name of your file is
-14. Control+X to exit, press Y and then Enter to confirm the filename
-15. Make `loop_one.sh` executable with the following: `sudo chmod +x loop_one.sh`
-
+15. Make `loop_one.scd` executable with the following: `sudo chmod +x loop_one.scd`
+16. Go back to the home directory: `cd`
+17. Open a hidden configuration file I forgot to change (sorry!): `sudo nano .jackdrc`
+18. Using your arrow keys, move the cursor to `-dhw:1` and change the `1` to a `0`
+19. Control+X to exit, Y to confirm changes, Enter to save
 
 ### testing loop one
