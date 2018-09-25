@@ -46,8 +46,9 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 
 ### RPi
 
-1. Connect your Raspberry Pi to power, when the green 'ACT' light is flashing proceed to the next step
-2. On your laptop open the *Terminal*: `Applications > Utilities > Terminal`
-3. Send the file from the previous example to your Raspberry Pi: `scp FILENAME.wav pi@HOSTNAME.local:/home/pi/`
-2. Connect to the Raspberry Pi from your laptop: `ssh pi@HOSTNAME.local`
+1. Connect your Raspberry Pi to power, when the green `ACT` light is flashing proceed to the next step
+2. On your laptop open the **Terminal**: `Applications > Utilities > Terminal`
+3. Navigate to the Desktop: `cd Desktop/` (the Terminal has autocomplete, press the TAB key after typing the first few letters of `Desktop` to use it), press ENTER
+4. Send the file from the previous example to your Raspberry Pi: `scp FILENAME.wav pi@HOSTNAME.local:/home/pi/`
+5. Connect to the Raspberry Pi from your laptop: `ssh pi@HOSTNAME.local`
 2. Change
