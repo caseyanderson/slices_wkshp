@@ -37,7 +37,8 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 
 9. Click on `Browse` and select the `Desktop` as the `Output Directory`
 10. Click on `Bounds` and select `Time Selection`
-11. Name your file, the `Render to File` window should look something like this
+11. In `Channels` select `Mono`
+12. Name your file, the `Render to File` window should look something like this
 
 ![](imgs/render_to_file_ready.png)
 
