@@ -75,6 +75,13 @@ You should both hear your recording playing (plug headphones into the 3.5mm jack
 ![](imgs/working_loop_onescd.png)
 
 
+### SuperCollider: a brief introduction
+
+Supercollider is made up of two applications: a language interpreter and one or more synthesis servers. All communication between the `lang` (short for language) and the `server` is done via [OpenSoundControl](http://opensoundcontrol.org/).
+
+In order to make sound the server must be running.
+
+
 ### loop_one.scd: a brief explanation
 
 The long-term goal is to have the **RPi** automatically launch this **SC** file on boot, which requires some special steps in our code:
