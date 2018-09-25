@@ -76,10 +76,10 @@ s.waitForBoot{
 		\len, Pfunc { |e|
     var dur, bDur, rDiv;
     bDur = e[\buf].duration;
-    rDiv = rrand(2, 10);
+    rDiv = rrand(6, 12);
     dur = bDur / rDiv;
     dur.postln; },
-		\delta, Pkey(\len) + Pwhite( 6, 10, inf)
+		\delta, Pkey(\len) + Pwhite( 2, 10, inf)
 	);
 
 	s.sync;
@@ -90,20 +90,3 @@ s.waitForBoot{
 	~playMe = ~sample_player.play;
 
 };
-
-/////////
-
-/*
- ~playMe.stop;
-
-// v2
-
-// this way also works and may be more portable in the long-run
-(
-~sample_player = Pbind(
-	\instrument, \play,
- 	\buf, Pfunc({ |e| ~buffers.choose }),
- 	\len, Pfunc({ |e| e[\buf].numFrames/e[\buf].sampleRate }),
- 	\delta, Pkey(\len)
- );
-*/
