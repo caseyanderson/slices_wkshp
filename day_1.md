@@ -41,7 +41,7 @@ Take some time to find a portion of your recording, shorter than its full 2 minu
 10. Click on `Bounds` and select `Time Selection`
 11. Name your file. The `Render to File` window should look something like this
 
-![](imgs/render_to_file_ready.png)
+![](imgs/render_to_file_ready_stereo.png)
 
 12. Click `Render 1 File`
 
