@@ -76,7 +76,7 @@ s.waitForBoot{
 		\len, Pfunc { |e|
     var dur, bDur, rDiv;
     bDur = e[\buf].duration;
-    rDiv = Rand(2, 10);
+    rDiv = rrand(2, 10);
     dur = bDur / rDiv;
     dur.postln; },
 		\delta, Pkey(\len) + Pwhite( 6, 10, inf)
