@@ -13,19 +13,19 @@
 
 ### Recording
 
-Using your phone's Voice Memo app, or a similar one, go outside and find an outdoor space to record. Make **five** recordings, each **2 minutes** in duration, from **five** different places in your selected location. Remember to bring headphones, a sound analog to a camera's viewfinder, so you know what you are recording.
+Using your phone's Voice Memo app, or a similar one, go outside and find an outdoor space, with a wide variety of sounds, to record. Make **five** recordings, each **2 minutes** in duration, from **five** different places in your selected location. Remember to bring headphones, a sound analog to a camera's viewfinder, so you know what you are recording.
 
 
 ### Basic Editing
 
 1. Get your recordings off of your phone and onto your laptop
 2. Download Reaper [here](https://www.reaper.fm/download.php)
-3. Open Reaper, it should look something like this
+3. Open Reaper, it should look something like this (you may notice that I am using the demo because I apparently lost my license file, heh)
 
 ![](imgs/reaper_window.png)
 
 4. Open one of your recordings: `Insert > Media File`
-5. Double Click on your file, which will open the `Properties` window. Click `Normalize`, then click `Apply`, and `OK` (if you are curious, you can read about normalization [here](https://en.wikipedia.org/wiki/Audio_normalization))
+5. Double click on your file, which will open the `Properties` window. Click `Normalize`, then click `Apply`, and `OK` (if you are curious, you can read about normalization [here](https://en.wikipedia.org/wiki/Audio_normalization))
 5. Right click on the file and go to `Item Settings`, scroll down to `Take Channel Mode: Mono (downmix)`. Your `Stereo` file is now `Mono`.
 6. Click the `Play` button to listen to the `Mono` version of your recording
 7. In the transport bar click and drag your cursor from the beginning of your file to the end. You should see two carrot looking markers at the beginning and end of your file, something like this
