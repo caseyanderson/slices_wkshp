@@ -2,7 +2,7 @@
 loop_all.scd
 Casey Anderson, 2018
 
-play all files in a directory as one long loop
+play all files in a directory with a pattern
 
 run the file from inside supercolliderStandaloneRPI1 as follows (edit to suit your needs):
 
