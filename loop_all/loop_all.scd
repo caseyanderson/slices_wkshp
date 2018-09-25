@@ -6,7 +6,7 @@ play all files in a directory as one long loop
 
 run the file from inside supercolliderStandaloneRPI1 as follows (edit to suit your needs):
 
-	xvfb-run --auto-servernum ./sclang -a -l ~/supercolliderStandaloneRPI1/sclang.yaml /home/pi/SC3-RPiZeroW/fixed_media/loop_all/loop_all.scd /path/to/the/directory
+	xvfb-run --auto-servernum ./sclang -a -l ~/supercolliderStandaloneRPI1/sclang.yaml /home/pi/slices_wkshp/loop_all/loop_all.scd /home/pi/recordings
 
 
 TODO:
