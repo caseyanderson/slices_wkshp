@@ -71,7 +71,6 @@ s.waitForBoot{
 
 	~sample_player = Pbind(
 		\instrument, \play,
-		//	\buf, Pseq(~buffers, inf), // plays all samples in order
 		\buf, Pxrand(~buffers, inf),
 		\len, Pfunc { |e|
     var dur, bDur, rDiv;

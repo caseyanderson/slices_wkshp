@@ -13,7 +13,7 @@
 
 ### Recording
 
-Using your phone's Voice Memo app, or a similar one, go outside and find an outdoor space, with a wide variety of sounds, to record. Make **five** recordings, each **2 minutes** in duration, from **five** different places in your selected location. Remember to bring headphones, a sound analog to a camera's viewfinder, so you know what you are recording.
+Using your phone's Voice Memo app, or a similar one, go outside and find an outdoor space with a wide variety of sounds to record. Make **5** recordings, each **2 minutes** in duration, from **5** different places in your selected location. Each of your recordings should be unique, so take time to experiment. Remember to bring headphones, a sound analog to a camera's viewfinder, so you know what you are recording.
 
 
 ### Basic Editing
