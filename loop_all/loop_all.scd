@@ -73,7 +73,12 @@ s.waitForBoot{
 		\instrument, \play,
 		//	\buf, Pseq(~buffers, inf), // plays all samples in order
 		\buf, Pxrand(~buffers, inf),
-		\len, Pfunc { |e| var number; number = e[\buf].duration / 8; number.postln; },
+		\len, Pfunc { |e|
+    var dur, bDur, rDiv;
+    bDur = e[\buf].duration;
+    rDiv = Rand(2, 10);
+    dur = bDur / rDiv;
+    dur.postln; },
 		\delta, Pkey(\len) + Pwhite( 6, 10, inf)
 	);
 
