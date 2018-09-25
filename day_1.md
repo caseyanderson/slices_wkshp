@@ -45,7 +45,7 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 12. Click `Render 1 File`
 
 
-### RPi Prep
+### RPi and loop_one.scd Prep
 
 1. Connect your Raspberry Pi to power, when the green `ACT` light is flashing proceed to the next step
 2. On your laptop open the **Terminal**: `Applications > Utilities > Terminal`
@@ -63,4 +63,12 @@ Using your phone's Voice Memo app, or a similar one, go outside and find an outd
 18. Using your arrow keys, move the cursor to `-dhw:1` and change the `1` to a `0`
 19. Control+X to exit, Y to confirm changes, Enter to save
 
+
 ### testing loop one
+
+1. From the home directory navigate to the SC directory (this sucks to type so remember to use autocomplete with TAB): `cd supercolliderStandaloneRPI2/`
+2. run the following command (copy and paste it and then edit the filename): `xvfb-run --auto-servernum ./sclang -a -l ~/supercolliderStandaloneRPI2/sclang.yaml /home/pi/slices_wkshp/loop_one/loop_one.scd /home/pi/recordings/haiti.wav`
+
+You should both hear your recording playing (plug headphones into the 3.5mm jack on the RPi) and see something like this if everything worked
+
+![](imgs/working_loop_onescd.png)
