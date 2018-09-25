@@ -32,7 +32,7 @@ s.waitForBoot{
 	// setup buffer
 
 //	~buf = Buffer.read( s, thePath[0].asString);
-	~buf = Buffer.readChannel(s, thePath[0].asString, channels: 0 )
+	~buf = Buffer.readChannel(s, thePath[0].asString, channels: 0 );
 
 	// wait for sync message from server
 
