@@ -62,7 +62,7 @@ s.waitForBoot{
 		var env, sig;
 
 		env = EnvGen.kr( Env.linen( 0.0, len, 0.01), trig,  doneAction: 2 );
-		sig = PlayBuf.ar(2, buf, BufRateScale.kr( buf ), loop: 0) * env;
+		sig = PlayBuf.ar(1, buf, BufRateScale.kr( buf ), loop: 0) * env;
 		Out.ar(0, sig);
 	}).add;
 
