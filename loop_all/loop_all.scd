@@ -62,7 +62,7 @@ s.waitForBoot{
 		var env, sig;
 
 		env = EnvGen.kr( Env.linen( 0.0, len, 0.01), trig,  doneAction: 2 );
-		sig = PlayBuf.ar(1, buf, BufRateScale.kr( buf ), loop: 0) * env;
+		sig = PlayBuf.ar(1, buf, BufRateScale.kr( buf ), startPos: (start * BufFrames.kr(buf)), loop: 1) * env;
 		Out.ar(0, sig);
 	}).add;
 
@@ -75,9 +75,10 @@ s.waitForBoot{
 		\len, Pfunc { |e|
       var dur, bDur, rDiv;
       bDur = e[\buf].duration;
-      rDiv = rrand(6, 15); // (2, 10), (6, 15), (20, 30)
+      rDiv = rrand(20, 30); // (2, 10), (6, 15), (20, 30)
       dur = bDur / rDiv;
     },
+    \start, Pwhite(0.0, 1.0, inf),
 		\delta, Pkey(\len) + Pwhite( 2, 10, inf)
 	);
 
