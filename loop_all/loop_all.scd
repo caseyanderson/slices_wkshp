@@ -78,7 +78,6 @@ s.waitForBoot{
       rDiv = rrand(6, 15); // (2, 10), (6, 15), (20, 30)
       dur = bDur / rDiv;
     },
-    \start, Pwhite(0.0, 1.0, inf),
 		\delta, Pkey(\len) + Pwhite( 2, 10, inf)
 	);
 
