@@ -68,7 +68,7 @@ Take some time to find a portion of your recording, shorter than its full 2 minu
 ### testing loop_one.scd
 
 1. From the home directory navigate to the SC directory (this sucks to type so remember to use autocomplete with TAB): `cd supercolliderStandaloneRPI2/`
-2. run the following command (copy and paste it and then edit the filename): `xvfb-run --auto-servernum ./sclang -a -l ~/supercolliderStandaloneRPI2/sclang.yaml /home/pi/slices_wkshp/loop_one/loop_one.scd /home/pi/recordings/haiti.wav`
+2. run the following command (copy and paste it and then edit the filename): `xvfb-run --auto-servernum ./sclang -a -l ~/supercolliderStandaloneRPI2/sclang.yaml /home/pi/slices_wkshp/loop_all/loop_all.scd /home/pi/recordings`
 
 You should both hear your recording playing (plug headphones into the 3.5mm jack on the **RPi**) and see something like this if everything worked
 
