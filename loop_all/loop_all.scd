@@ -58,12 +58,12 @@ s.waitForBoot{
 
 	// the SynthDef //
 
-  SynthDef(\play, { | amp = 0.0, buf, len, start = 0, trig = 1 |
+  SynthDef(\play, { | amp = 0.0, buf, len, out = 0, start = 0, trig = 1 |
 		var env, sig;
 
 		env = EnvGen.kr( Env.linen( 0.0, len, 0.01), trig,  doneAction: 2 );
 		sig = PlayBuf.ar(1, buf, BufRateScale.kr( buf ), startPos: (start * BufFrames.kr(buf)), loop: 1) * env;
-		Out.ar(0, sig);
+		Out.ar(out, sig);
 	}).add;
 
 
@@ -75,9 +75,10 @@ s.waitForBoot{
 		\len, Pfunc { |e|
       var dur, bDur, rDiv;
       bDur = e[\buf].duration;
-      rDiv = rrand(20, 30); // (2, 10), (6, 15), (20, 30)
+      rDiv = rrand(2, 10); // (2, 10), (6, 15), (20, 30)
       dur = bDur / rDiv;
     },
+	\out, 0,
     \start, Pwhite(0.0, 1.0, inf),
 		\delta, Pkey(\len) + Pwhite( 2, 10, inf)
 	);
